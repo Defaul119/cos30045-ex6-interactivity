@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>COS30045 Week 6 Lab</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/visualisation.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a href="index.html">COS30045 Week 6 Lab</a>
+      <span class="crumb">Interaction: filters and tooltips</span>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h1>Week 6 Lab — Filters and tooltips</h1>
+    <p class="lede">
+      Two charts of the same 4,233 TV models. The histogram (Exercise 6.1) gets filter buttons for screen
+      technology (6.2); the scatterplot (6.3) gets a legend and a tooltip for each TV (6.4).
+    </p>
+
+    <p class="exercise">Exercises 6.1 and 6.2 · Histogram with filters</p>
+    <h2>How much energy does a TV use in a year?</h2>
+    <p class="lede">
+      Most TVs use 200 to 600 kWh a year; the median is 400. A long tail reaches 1,800 kWh, and one 114-inch
+      TV uses 2,652 kWh, alone in the last bin. Pick a screen technology to see its models only.
+    </p>
+    <div id="filters_screen"></div>
+    <div id="histogram" class="responsive-svg-container"></div>
+    <p class="source">
+      Bins are 200 kWh/year wide and stay the same for every filter. The y-axis rescales to fit the
+      selected technology (there are 3,492 LED, 455 LCD and 286 OLED models), so read the axis before
+      comparing bar heights between filters.
+    </p>
+
+    <p class="exercise">Exercises 6.3 and 6.4 · Scatterplot with tooltips</p>
+    <h2>Do more stars mean less energy?</h2>
+    <p class="lede">
+      Yes: the median TV uses 1,135 kWh a year at 1 star, 422 kWh at 4 stars and 200 kWh at 7 stars. Each
+      star rating is a column of TVs of different sizes. Hover over a circle to see the model.
+    </p>
+    <div id="scatterplot" class="responsive-svg-container"></div>
+    <p class="source">
+      Source: <code>Ex6_TVdata_withStar.csv</code>, made by the tutor's KNIME workflow
+      (<code>knime/W6 TV Data.knwf</code>) from the Energy Rating register of televisions
+      (<code>tv_2026_02_15.csv</code>), data.gov.au.
+    </p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">COS30045 Data Visualisation · Swinburne University of Technology</div>
+  </footer>
+
+  <script src="js/vendor/d3.v7.min.js"></script>
+  <script src="js/load-data.js"></script>
+  <script src="js/shared-constants.js"></script>
+  <script src="js/interactions.js"></script>
+  <script src="js/histogram.js"></script>
+  <script src="js/scatterplot.js"></script>
+</body>
+</html>

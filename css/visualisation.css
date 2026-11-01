@@ -1,0 +1,22 @@
+.responsive-svg-container {
+  max-width: 900px;
+  margin: 1rem 0 0;
+}
+
+.responsive-svg-container svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.axis text { font-size: 14px; fill: #4a5866; }
+.axis path, .axis line { stroke: #c3c2b7; }
+.axis-label { font-size: 14px; fill: #4a5866; }
+
+.legend text { font-size: 14px; fill: #4a5866; }
+
+#scatterplot circle { cursor: pointer; }
+
+.tooltip { pointer-events: none; }
+.tooltip text { font-size: 13px; }
+.tooltip .tooltip-title { font-weight: 700; }
